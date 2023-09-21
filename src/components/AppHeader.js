@@ -164,7 +164,7 @@ function Navbar() {
     alignItems: 'center', 
     backgroundColor: primaryColor, 
     fontFamily: 'Noto Sans KR, sans-serif',
-    height: '78px',
+    height: '78px', 
   }
 
   const logoStyle = {
@@ -190,11 +190,13 @@ function Navbar() {
   }
 
   // 네비게이션 바 동작 설정 시작
-  
+
+  // 호버링 했을 때 드롭다운 메뉴들이 글 위에 덮어씌워지는게 아닌 그냥 밑에 글을 강제로 내리는 걸로.
+
   return (
     <div className='Navbar' style={ navBarStyle }>
       <Layout className='layout'>
-        <Header style={ headerStyle }>
+        <Header style={ headerStyle } >
           <div className='logo' style={ logoStyle }>LOGO SELECTORS</div>
           <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>
             {items.map(item => (

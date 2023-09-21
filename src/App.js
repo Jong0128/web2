@@ -1,6 +1,7 @@
 import PageContent from './components/PageContent';
 import AppFooter from './components/AppFooter';
 import Navbar from './components/AppHeader';
+import './App.css'
 
 
 function App() {

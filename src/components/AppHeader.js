@@ -46,7 +46,7 @@ const items = [
     children: [
       {
         type: 'group',
-        label: 'Item 1',
+        label: 'Item 2',
         children: [
           {  
             label: 'Option 1',
@@ -70,7 +70,7 @@ const items = [
     children: [
       {
         type: 'group',
-        label: 'Item 1',
+        label: 'Item 3',
         children: [
           {  
             label: 'Option 1',
@@ -94,7 +94,7 @@ const items = [
     children: [
       {
         type: 'group',
-        label: 'Item 1',
+        label: 'Item 4',
         children: [
           {  
             label: 'Option 1',
@@ -118,7 +118,7 @@ const items = [
     children: [
       {
         type: 'group',
-        label: 'Item 1',
+        label: 'Item 5',
         children: [
           {  
             label: '공지사항',
@@ -162,7 +162,8 @@ function Navbar() {
     justifyContent: 'space-between', 
     alignItems: 'center', 
     backgroundColor: primaryColor, 
-    fontFamily: 'Noto Sans KR, sans-serif'
+    fontFamily: 'Noto Sans KR, sans-serif',
+    height: '78px',
   }
 
   const logoStyle = {
@@ -177,7 +178,7 @@ function Navbar() {
     padding: '0 2vw', 
     backgroundColor: '#5D59FF', 
     fontFamily: 'Noto Sans KR, sans-serif', 
-    fontSize: '18px', 
+    fontSize: '19px', 
     color: 'white'
   }
 

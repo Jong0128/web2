@@ -136,7 +136,7 @@ const items = [
 
 // 네비게이션 메뉴 끝
 
-// 네비게이션 바 동작 설정 시작
+// 네비게이션 바 시작
 
 function Navbar() {
 
@@ -149,6 +149,7 @@ function Navbar() {
   // 웹사이트 주요 컬러.
   const primaryColor = '#5D59FF'
 
+  // 웹사이트 디자인.
   const navBarStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -188,7 +189,8 @@ function Navbar() {
     fontSize: '24px'
   }
 
-
+  // 네비게이션 바 동작 설정 시작
+  
   return (
     <div className='Navbar' style={ navBarStyle }>
       <Layout className='layout'>

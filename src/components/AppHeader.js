@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Dropdown, Input, Layout, Menu, Checkbox } from 'antd';
+import { Button, Layout, Menu } from 'antd';
 import SubMenu from 'antd/es/menu/SubMenu';
 import { BellOutlined, UserOutlined } from '@ant-design/icons'
 
@@ -146,18 +146,54 @@ function Navbar() {
     setCurrent(e.key);
   }
 
-  const [showLoginForm, setShowLoginForm] = useState(false);
+  // 웹사이트 주요 컬러.
+  const primaryColor = '#5D59FF'
 
-  const handleToggle = () => {
-    setShowLoginForm(!setShowLoginForm);
+  const navBarStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    backgroundColor: primaryColor,
+    fontFamily: 'Noto Sans KR, sans-serif',
+    height: '78px',
   }
 
+  const headerStyle = {
+    display: 'flex', 
+    justifyContent: 'space-between', 
+    alignItems: 'center', 
+    backgroundColor: primaryColor, 
+    fontFamily: 'Noto Sans KR, sans-serif'
+  }
+
+  const logoStyle = {
+    color: 'white', 
+    fontSize: '36px', 
+    fontWeight: 700, 
+    whiteSpace: 'nowrap', 
+    paddingLeft: '7vw'
+  }
+
+  const menuStyle = {
+    padding: '0 2vw', 
+    backgroundColor: '#5D59FF', 
+    fontFamily: 'Noto Sans KR, sans-serif', 
+    fontSize: '18px', 
+    color: 'white'
+  }
+
+  const buttonStyle = {
+    margin: '10px', 
+    backgroundColor: primaryColor, 
+    fontSize: '24px'
+  }
+
+
   return (
-    <div className='Navbar' style={{ height: '78px', display: 'flex', alignItems: 'center', backgroundColor: '#5D59FF'}}>
+    <div className='Navbar' style={ navBarStyle }>
       <Layout className='layout'>
-        <Header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#5D59FF', fontFamily: 'Noto Sans KR, sans-serif'}}>
-          <div className='logo' style={{ color: 'white', fontSize: '32px', fontWeight: 700, whiteSpace: 'nowrap', paddingLeft: '7vw'}}>LOGO SELECTORS</div>
-          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={{ padding: '0 2vw', backgroundColor: '#5D59FF', fontFamily: 'Noto Sans KR, sans-serif', fontSize: '16px', color: 'white'}}>
+        <Header style={ headerStyle }>
+          <div className='logo' style={ logoStyle }>LOGO SELECTORS</div>
+          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>
             {items.map(item => (
               <SubMenu key={item.key} title={item.label} style={{ margin: '0 2vw'}}>
                 {item.children[0].children.map(subItem => (
@@ -166,16 +202,13 @@ function Navbar() {
               </SubMenu>
             ))}
           </Menu>
-          <div className='Buttons' style={{ whiteSpace: 'nowrap', backgroundColor: '#5D59FF', paddingRight: '7vw' }}>              
-            <Button type="primary" style={{ margin: '10px', backgroundColor: '#5D59FF', fontSize: '20px'}}>
+          <div className='Buttons' style={{ whiteSpace: 'nowrap', backgroundColor: primaryColor, paddingRight: '7vw' }}>              
+            <Button type="primary" style={ buttonStyle }>
              <BellOutlined />
-            </Button>
-            {/*
-            <Button type="primary" style={{ margin: '10px', backgroundColor: '#5D59FF', fontSize: '20px'}}>
+            </Button>          
+            <Button type="primary" style={ buttonStyle }>
               <UserOutlined />
             </Button>
-            */}
-
           </div>
         </Header>
       </Layout>

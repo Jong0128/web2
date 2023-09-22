@@ -1,16 +1,14 @@
 import PageContent from './components/PageContent';
 import AppFooter from './components/AppFooter';
-import Navbar from './components/AppHeader';
-import './App.css'
-
+import AppHeader from './components/AppHeader';
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
-      <PageContent />
-      <AppFooter />
-    </div>
+    <>
+      <AppHeader/>
+      <PageContent/>
+      <AppFooter/>
+    </>
     );
 }
 

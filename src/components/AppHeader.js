@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Layout, Menu } from 'antd';
+import LoginBox from './LoginBox'
 import SubMenu from 'antd/es/menu/SubMenu';
 import { BellOutlined, UserOutlined } from '@ant-design/icons'
 
@@ -138,12 +139,18 @@ const items = [
 
 // 네비게이션 바 시작
 
-function Navbar() {
+function AppHeader() {
 
   const [current,setCurrent] = useState('null');
   const onClick = (e) => {
     console.log('click', e);
     setCurrent(e.key);
+  }
+
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownVisible(!isDropdownVisible);
   }
 
   // 웹사이트 주요 컬러.
@@ -154,7 +161,6 @@ function Navbar() {
     display: 'flex',
     alignItems: 'center',
     backgroundColor: primaryColor,
-    fontFamily: 'Noto Sans KR, sans-serif',
     height: '78px',
   }
 
@@ -164,7 +170,7 @@ function Navbar() {
     alignItems: 'center', 
     backgroundColor: primaryColor, 
     fontFamily: 'Noto Sans KR, sans-serif',
-    height: '78px', 
+    height: '78px',
   }
 
   const logoStyle = {
@@ -183,7 +189,18 @@ function Navbar() {
     color: 'white'
   }
 
-  const buttonStyle = {
+  const subMenuStyle ={
+    fontSize: '18px',
+    fontFamily: 'Noto Sans KR, sans-serif'
+  }
+
+  const btnConStyle = {
+    whiteSpace: 'nowrap', 
+    backgroundColor: primaryColor, 
+    paddingRight: '7vw'
+  }
+
+  const btnStyle = {
     margin: '10px', 
     backgroundColor: primaryColor, 
     fontSize: '24px'
@@ -191,27 +208,25 @@ function Navbar() {
 
   // 네비게이션 바 동작 설정 시작
 
-  // 호버링 했을 때 드롭다운 메뉴들이 글 위에 덮어씌워지는게 아닌 그냥 밑에 글을 강제로 내리는 걸로.
-
   return (
-    <div className='Navbar' style={ navBarStyle }>
-      <Layout className='layout'>
+    <div style={ navBarStyle }>
+      <Layout>
         <Header style={ headerStyle } >
-          <div className='logo' style={ logoStyle }>LOGO SELECTORS</div>
+          <div style={ logoStyle }>LOGO SELECTORS</div>
           <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>
             {items.map(item => (
               <SubMenu key={item.key} title={item.label} style={{ margin: '0 2vw'}}>
                 {item.children[0].children.map(subItem => (
-                  <Menu.Item key={subItem.key} style = {{ fontFamily: 'Noto Sans KR, sans-serif'}}>{subItem.label}</Menu.Item>
+                  <Menu.Item key={subItem.key} style = { subMenuStyle }>{subItem.label}</Menu.Item>
                 ))}
               </SubMenu>
             ))}
           </Menu>
-          <div className='Buttons' style={{ whiteSpace: 'nowrap', backgroundColor: primaryColor, paddingRight: '7vw' }}>              
-            <Button type="primary" style={ buttonStyle }>
+          <div style={ btnConStyle }>              
+            <Button type="primary" style={ btnStyle }>
              <BellOutlined />
             </Button>          
-            <Button type="primary" style={ buttonStyle }>
+            <Button type="primary" style={ btnStyle } onClick={toggleDropdown}>
               <UserOutlined />
             </Button>
           </div>
@@ -223,4 +238,4 @@ function Navbar() {
 
 // 네비게이션 바 동작 설정 끝
 
-export default Navbar;
+export default AppHeader;

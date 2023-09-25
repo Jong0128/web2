@@ -8,33 +8,31 @@ const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo);
 };
 
-function LoginBox() {
+function LoginForm() {
+
+  const loginFormStyle = {
+    fontFamily: 'Noto Sans KR, sans-serif',
+    width: 250,
+  }
+
   return (
     <Form
       name="basic"
-      labelCol={{
-        span: 8,
-      }}
-      wrapperCol={{
-        span: 16,
-      }}
-      style={{
-        maxWidth: 600,
-      }}
-      initialValues={{
-        remember: true,
-      }}
+      labelCol={{ span: 8 }}
+      wrapperCol={{ span: 16 }}
+      style={loginFormStyle}
+      initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
       <Form.Item
-        label="Username"
+        label="아이디"
         name="username"
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: '아이디를 입력해주세요!',
           },
         ]}
       >
@@ -42,12 +40,12 @@ function LoginBox() {
       </Form.Item>
 
       <Form.Item
-        label="Password"
+        label="비밀번호"
         name="password"
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: '비밀번호를 입력해주세요!',
           },
         ]}
       >
@@ -57,26 +55,20 @@ function LoginBox() {
       <Form.Item
         name="remember"
         valuePropName="checked"
-        wrapperCol={{
-          offset: 8,
-          span: 16,
-        }}
+        wrapperCol={{ offset: 8, span: 16 }}
       >
         <Checkbox>Remember me</Checkbox>
       </Form.Item>
 
       <Form.Item
-        wrapperCol={{
-          offset: 8,
-          span: 16,
-        }}
+        wrapperCol={{ offset: 8, span: 16 }}
       >
         <Button type="primary" htmlType="submit">
-          Submit
+          로그인
         </Button>
       </Form.Item>
     </Form>
   )
-}
+};
 
-export default LoginBox;
+export default LoginForm

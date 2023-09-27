@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Avatar, List } from 'antd';
 
-// 알람창에 들어가는 내용
 const data = [
   {
     title: 'Avatar1'

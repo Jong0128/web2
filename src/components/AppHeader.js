@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { Button, Layout, Menu } from 'antd';
+import { Badge, Button, Layout, Menu } from 'antd';
 import SubMenu from 'antd/es/menu/SubMenu';
 import LoginForm from './LoginForm';
-import { UserOutlined } from '@ant-design/icons';
+import Notification from './Notification'
+import { UserOutlined, BellOutlined } from '@ant-design/icons';
 
 const { Header } = Layout;
 
 // 네비게이션 메뉴 시작 
-
 
 const items = [
   {
@@ -144,6 +144,9 @@ function AppHeader() {
 
   const [current, setCurrent] = useState('null');
   const [isLoginFormVisible, setIsLoginFormVisible] = useState(false);
+  const [isNotificationVisible, setIsNotificationVisible] = useState(false);
+  const [notificationCount, setNotificationCount] = useState(100);
+
 
   const onClick = (e) => {
     console.log('click', e);
@@ -152,6 +155,13 @@ function AppHeader() {
 
   const toggleLoginForm = () => {
     setIsLoginFormVisible(!isLoginFormVisible);
+    setIsNotificationVisible(false);
+  }
+
+  const toggleNotification = () => {
+    setIsNotificationVisible(!isNotificationVisible);
+    setIsLoginFormVisible(false);
+    setNotificationCount(0);
   }
 
 
@@ -220,6 +230,18 @@ function AppHeader() {
     borderRadius: '10px',
     display: isLoginFormVisible ? 'block' : 'none',
   }
+
+  const notificationDropdownStyle = {
+    position: 'absolute',
+    top: '80px',
+    left: '-140px',
+    paddingLeft: '20px',
+    paddingRight: '20px',
+    border: `5px solid ${primaryColor}`,
+    borderRadius: '10px',
+    display: isNotificationVisible ? 'block' : 'none',
+  }
+
   // 네비게이션 바 동작 설정 시작
 
   return (
@@ -242,6 +264,14 @@ function AppHeader() {
             </Button>
             <div style={loginDropdownStyle}>
               <LoginForm />
+            </div>
+              <Badge count={notificationCount} style={{top: '1rem'}}>
+                <Button onClick={toggleNotification} type='primary' style={btnStyle}>
+                  <BellOutlined />
+                </Button>
+              </Badge>  
+            <div style={notificationDropdownStyle}>
+              <Notification />
             </div>
           </div>
         </Header>

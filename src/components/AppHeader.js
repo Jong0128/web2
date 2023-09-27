@@ -169,6 +169,8 @@ function AppHeader() {
   const primaryColor = '#5D59FF'
 
   // 웹사이트 디자인.
+
+  // 네비게이션바 디자인
   const navBarStyle = {
     display: 'flex',
     alignItems: 'center',
@@ -185,6 +187,7 @@ function AppHeader() {
     height: '78px',
   }
 
+  // 로고 디자인
   const logoStyle = {
     color: 'white',
     fontSize: '36px',
@@ -193,6 +196,7 @@ function AppHeader() {
     paddingLeft: '7vw'
   }
 
+  // 네비게이션바 메뉴 디자인
   const menuStyle = {
     padding: '0 2vw',
     backgroundColor: '#5D59FF',
@@ -201,11 +205,13 @@ function AppHeader() {
     color: 'white'
   }
 
+  // 네비게이션바 서브메뉴 디자인
   const subMenuStyle = {
     fontSize: '18px',
     fontFamily: 'Noto Sans KR, sans-serif'
   }
 
+  // 네비게이션바 버튼 메뉴 디자인
   const btnConStyle = {
     whiteSpace: 'nowrap',
     backgroundColor: primaryColor,
@@ -213,12 +219,14 @@ function AppHeader() {
     position: 'relative'
   }
 
+  // 네비게이션바 버튼 디자인
   const btnStyle = {
     margin: '10px',
     backgroundColor: primaryColor,
     fontSize: '24px'
   }
 
+  // 로그인 드롭다운 디자인
   const loginDropdownStyle = {
     position: 'absolute',
     top: '80px',
@@ -231,10 +239,11 @@ function AppHeader() {
     display: isLoginFormVisible ? 'block' : 'none',
   }
 
+  // 알람 드롭다운 디자인
   const notificationDropdownStyle = {
     position: 'absolute',
     top: '80px',
-    left: '-140px',
+    right: '1rem',
     paddingLeft: '20px',
     paddingRight: '20px',
     border: `5px solid ${primaryColor}`,
@@ -242,14 +251,27 @@ function AppHeader() {
     display: isNotificationVisible ? 'block' : 'none',
   }
 
-  // 네비게이션 바 동작 설정 시작
+  // 뱃지 스타일
+  const badgeStyle = {
+    position: 'absolute',
+    top: '1rem',
+    right: '1rem',
+  };
 
+
+  // 네비게이션 바 동작 설정 시작
   return (
     <div style={navBarStyle}>
       <Layout>
         <Header style={headerStyle} >
+
+          {/* 로고 */}
           <div style={logoStyle}>LOGO SELECTORS</div>
+
+          {/* 메인 메뉴*/}
           <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>
+
+            {/*서브 메뉴*/}
             {items.map(item => (
               <SubMenu key={item.key} title={item.label} style={{ margin: '0 2vw' }}>
                 {item.children[0].children.map(subItem => (
@@ -258,20 +280,26 @@ function AppHeader() {
               </SubMenu>
             ))}
           </Menu>
+
+          {/* 버튼 메뉴*/}
           <div style={btnConStyle}>
+
+            {/*알람 버튼*/}
+            <Badge count={notificationCount} style={badgeStyle}>
+              <Button onClick={toggleNotification} type='primary' style={btnStyle}>
+                <BellOutlined />
+              </Button>
+            </Badge>
+            <div style={notificationDropdownStyle}>
+              <Notification />
+            </div>
+
+            {/*로그인 버튼*/}
             <Button onClick={toggleLoginForm} type='primary' style={btnStyle}>
               <UserOutlined />
             </Button>
             <div style={loginDropdownStyle}>
               <LoginForm />
-            </div>
-              <Badge count={notificationCount} style={{top: '1rem'}}>
-                <Button onClick={toggleNotification} type='primary' style={btnStyle}>
-                  <BellOutlined />
-                </Button>
-              </Badge>  
-            <div style={notificationDropdownStyle}>
-              <Notification />
             </div>
           </div>
         </Header>

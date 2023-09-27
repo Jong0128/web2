@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Avatar, List } from 'antd';
 
+// 알람창에 들어가는 내용
 const data = [
   {
     title: 'Avatar1'
@@ -19,11 +20,13 @@ const data = [
 
 function Notification() {
 
+  // 알람창 디자인
   const notificationStyle = {
     fontFamily: 'Noto Sans KR, sans-serif',
     width: '350px',
   }
 
+  // 정렬
   const listItemStyle = {
     whiteSpace: 'break-spaces',
   }

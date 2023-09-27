@@ -10,6 +10,7 @@ const onFinishFailed = (errorInfo) => {
 
 function LoginForm() {
 
+  // 로그인 폼 디자인
   const loginFormStyle = {
     fontFamily: 'Noto Sans KR, sans-serif',
     width: 250,
@@ -57,7 +58,7 @@ function LoginForm() {
         valuePropName="checked"
         wrapperCol={{ offset: 8, span: 16 }}
       >
-        <Checkbox>Remember me</Checkbox>
+        <Checkbox>로그인 상태 유지</Checkbox>
       </Form.Item>
 
       <Form.Item

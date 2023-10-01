@@ -171,43 +171,43 @@ function AppHeader() {
   // 웹사이트 디자인.
 
   // 네비게이션바 디자인
-  const navBarStyle = {
+  const navBarStyle = {  
+    width: '100%',
     display: 'flex',
     alignItems: 'center',
     backgroundColor: primaryColor,
-    height: '78px',
   }
 
   const headerStyle = {
+    width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: primaryColor,
     fontFamily: 'Noto Sans KR, sans-serif',
-    height: '78px',
+    height: '5rem',
   }
 
   // 로고 디자인
   const logoStyle = {
     color: 'white',
-    fontSize: '36px',
+    fontSize: '30px',
     fontWeight: 700,
     whiteSpace: 'nowrap',
-    paddingLeft: '7vw'
+    paddingLeft: '8rem',
   }
 
   // 네비게이션바 메뉴 디자인
   const menuStyle = {
-    padding: '0 2vw',
     backgroundColor: '#5D59FF',
     fontFamily: 'Noto Sans KR, sans-serif',
-    fontSize: '19px',
-    color: 'white'
+    fontSize: '14px',
+    color: 'white',
   }
 
   // 네비게이션바 서브메뉴 디자인
   const subMenuStyle = {
-    fontSize: '18px',
+    fontSize: '12px',
     fontFamily: 'Noto Sans KR, sans-serif'
   }
 
@@ -215,15 +215,15 @@ function AppHeader() {
   const btnConStyle = {
     whiteSpace: 'nowrap',
     backgroundColor: primaryColor,
-    paddingRight: '5vw',
-    position: 'relative'
+    paddingRight: '8rem',
+    position: 'relative',
   }
 
   // 네비게이션바 버튼 디자인
   const btnStyle = {
-    margin: '10px',
+    margin: '0.5rem',
     backgroundColor: primaryColor,
-    fontSize: '24px'
+    fontSize: '20px'
   }
 
   // 로그인 드롭다운 디자인
@@ -302,6 +302,7 @@ function AppHeader() {
               <LoginForm />
             </div>
           </div>
+
         </Header>
       </Layout>
     </div>

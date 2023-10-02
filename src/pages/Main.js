@@ -1,5 +1,6 @@
 import { Card, Divider, Row, Col, Input, Carousel } from "antd";
 import { SearchOutlined } from '@ant-design/icons';
+import AppHeader from "../components/AppHeader";
 
 function Main() {
 
@@ -48,7 +49,6 @@ function Main() {
   const contentStyle2 = {
     height: '20rem',
     width: '24rem',
-    color: '#fff',
     lineHeight: '42rem',
     textAlign: 'center',
     background: '#364d79',
@@ -59,6 +59,7 @@ function Main() {
 
   return (
     <div>
+      <AppHeader/>
       <Row style={rowStyle}>
 
         {/* 첫번째 열 게시판 */}

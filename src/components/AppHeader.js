@@ -233,6 +233,8 @@ function AppHeader() {
     border: `5px solid ${primaryColor}`,
     borderRadius: '10px',
     display: isLoginFormVisible ? 'block' : 'none',
+    backgroundColor: 'white',
+    zIndex: 1,
   }
 
   // 알람 드롭다운 디자인
@@ -245,6 +247,8 @@ function AppHeader() {
     border: `5px solid ${primaryColor}`,
     borderRadius: '10px',
     display: isNotificationVisible ? 'block' : 'none',
+    backgroundColor: 'white',
+    zIndex: 1,
   }
 
   // 뱃지 스타일

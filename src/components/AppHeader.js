@@ -205,7 +205,6 @@ function AppHeader() {
   const subMenuStyle = {
     fontSize: '12px',
     fontFamily: 'Noto Sans KR, sans-serif',
-
   }
 
   // 네비게이션바 버튼 메뉴 디자인

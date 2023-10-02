@@ -164,19 +164,12 @@ function AppHeader() {
     setNotificationCount(0);
   }
 
-
   // 웹사이트 주요 컬러.
   const primaryColor = '#5D59FF'
 
   // 웹사이트 디자인.
 
   // 네비게이션바 디자인
-  const navBarStyle = {  
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    backgroundColor: primaryColor,
-  }
 
   const headerStyle = {
     width: '100%',
@@ -185,37 +178,41 @@ function AppHeader() {
     alignItems: 'center',
     backgroundColor: primaryColor,
     fontFamily: 'Noto Sans KR, sans-serif',
-    height: '5rem',
+    padding: '1rem 10rem',
   }
 
   // 로고 디자인
   const logoStyle = {
+    backgroundColor: primaryColor,
     color: 'white',
     fontSize: '30px',
     fontWeight: 700,
     whiteSpace: 'nowrap',
-    paddingLeft: '8rem',
+
   }
 
   // 네비게이션바 메뉴 디자인
   const menuStyle = {
-    backgroundColor: '#5D59FF',
+    backgroundColor: primaryColor,
     fontFamily: 'Noto Sans KR, sans-serif',
     fontSize: '14px',
     color: 'white',
+    borderBottom: 'none',
+
   }
 
   // 네비게이션바 서브메뉴 디자인
   const subMenuStyle = {
     fontSize: '12px',
-    fontFamily: 'Noto Sans KR, sans-serif'
+    fontFamily: 'Noto Sans KR, sans-serif',
+
   }
 
   // 네비게이션바 버튼 메뉴 디자인
   const btnConStyle = {
     whiteSpace: 'nowrap',
     backgroundColor: primaryColor,
-    paddingRight: '8rem',
+    marginRight: '8vw',
     position: 'relative',
   }
 
@@ -229,11 +226,11 @@ function AppHeader() {
   // 로그인 드롭다운 디자인
   const loginDropdownStyle = {
     position: 'absolute',
-    top: '80px',
-    paddingTop: '22px',
-    paddingLeft: '20px',
-    paddingRight: '20px',
-    left: '-100px',
+    top: '4.5rem',
+    paddingTop: '1rem',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    left: '-4rem',
     border: `5px solid ${primaryColor}`,
     borderRadius: '10px',
     display: isLoginFormVisible ? 'block' : 'none',
@@ -242,10 +239,10 @@ function AppHeader() {
   // 알람 드롭다운 디자인
   const notificationDropdownStyle = {
     position: 'absolute',
-    top: '80px',
-    right: '1rem',
-    paddingLeft: '20px',
-    paddingRight: '20px',
+    top: '4.5rem',
+    left: '-10rem',
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
     border: `5px solid ${primaryColor}`,
     borderRadius: '10px',
     display: isNotificationVisible ? 'block' : 'none',
@@ -261,51 +258,47 @@ function AppHeader() {
 
   // 네비게이션 바 동작 설정 시작
   return (
-    <div style={navBarStyle}>
-      <Layout>
-        <Header style={headerStyle} >
+    <Layout>
+      <Header style={headerStyle}>
+        {/* 로고 */}
+        <div style={logoStyle}>LOGO SELECTORS</div>
 
-          {/* 로고 */}
-          <div style={logoStyle}>LOGO SELECTORS</div>
+        {/* 메인 메뉴*/}
+        <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>
 
-          {/* 메인 메뉴*/}
-          <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>
+          {/*서브 메뉴*/}
+          {items.map(item => (
+            <SubMenu key={item.key} title={item.label} style={{ margin: '0 1vw' }}>
+              {item.children[0].children.map(subItem => (
+                <Menu.Item key={subItem.key} style={subMenuStyle}>{subItem.label}</Menu.Item>
+              ))}
+            </SubMenu>
+          ))}
+        </Menu>
 
-            {/*서브 메뉴*/}
-            {items.map(item => (
-              <SubMenu key={item.key} title={item.label} style={{ margin: '0 2vw' }}>
-                {item.children[0].children.map(subItem => (
-                  <Menu.Item key={subItem.key} style={subMenuStyle}>{subItem.label}</Menu.Item>
-                ))}
-              </SubMenu>
-            ))}
-          </Menu>
+        {/* 버튼 메뉴*/}
+        <div style={btnConStyle}>
 
-          {/* 버튼 메뉴*/}
-          <div style={btnConStyle}>
-
-            {/*알람 버튼*/}
-            <Badge count={notificationCount} style={badgeStyle}>
-              <Button onClick={toggleNotification} type='primary' style={btnStyle}>
-                <BellOutlined />
-              </Button>
-            </Badge>
-            <div style={notificationDropdownStyle}>
-              <Notification />
-            </div>
-
-            {/*로그인 버튼*/}
-            <Button onClick={toggleLoginForm} type='primary' style={btnStyle}>
-              <UserOutlined />
+          {/*알람 버튼*/}
+          <Badge count={notificationCount} style={badgeStyle}>
+            <Button onClick={toggleNotification} type='primary' style={btnStyle}>
+              <BellOutlined />
             </Button>
-            <div style={loginDropdownStyle}>
-              <LoginForm />
-            </div>
+          </Badge>
+          <div style={notificationDropdownStyle}>
+            <Notification />
           </div>
 
-        </Header>
-      </Layout>
-    </div>
+          {/*로그인 버튼*/}
+          <Button onClick={toggleLoginForm} type='primary' style={btnStyle}>
+            <UserOutlined />
+          </Button>
+          <div style={loginDropdownStyle}>
+            <LoginForm />
+          </div>
+        </div>
+      </Header>
+    </Layout>
   );
 }
 

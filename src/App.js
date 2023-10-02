@@ -4,9 +4,11 @@ import AppHeader from './components/AppHeader';
 import Main from './pages/Main'
 
 
+
 function App() {
   return (
     <>
+    <AppHeader/>
     <Main/>
     </>
   );

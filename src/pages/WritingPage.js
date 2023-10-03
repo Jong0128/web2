@@ -1,7 +1,13 @@
 import AppHeader from "../components/AppHeader";
+import PostForm from "../components/PostForm";
 
-function writingPage () {
+function WritingPage () {
   return(
-    <AppHeader/>
+    <div>
+      <AppHeader />
+      <PostForm />
+    </div>
   )
 }
+
+export default WritingPage;

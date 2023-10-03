@@ -7,20 +7,20 @@ function Main() {
   // 웹사이트 주요 컬러.
   const primaryColor = '#5D59FF'
 
-  // 메인 스타일(여백)
+  // 전체 게시글 모음 스타일
   const rowStyle = {
     marginTop: '3rem',
     marginLeft: '9rem',
     marginRight: '9rem',
   }
 
-  // 게시글 모음 스타일
+  // 게시글 카드 스타일
   const cardStyle = {
     marginBottom: '1rem',
     marginLeft: '1rem',
   }
 
-  // 검색 바 스타일
+  // 검색 창 스타일
   const searchStyle = {
     marginLeft: '5rem',
     border: `1px solid ${primaryColor}`,
@@ -35,7 +35,7 @@ function Main() {
     width: '24rem',
   }
 
-  // 랭킹 글자 스타일
+  // 랭킹 내 폰트 스타일
   const letterStyle = {
     paddingRight: '10px',
     color: primaryColor,
@@ -52,7 +52,7 @@ function Main() {
     background: '#364d79',
   };
 
-  // 판매글 스타일
+  // 판매 글 스타일
   const contentStyle2 = {
     height: '20rem',
     width: '24rem',
@@ -66,7 +66,7 @@ function Main() {
 
   return (
     <div>
-      <AppHeader/>
+      <AppHeader />
       <Row style={rowStyle}>
 
         {/* 첫번째 열 게시판 */}
@@ -252,8 +252,6 @@ function Main() {
             대학교
           </Card>
         </Col>
-        
-        {/* 세번째 열 */}
         <Col span={8}>
           <Input
             style={searchStyle}

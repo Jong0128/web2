@@ -174,11 +174,12 @@ function AppHeader() {
   const headerStyle = {
     width: '100%',
     display: 'flex',
-    justifyContent: 'space-between',
+    padding: '0',
+    paddingLeft: '9vw',
     alignItems: 'center',
     backgroundColor: primaryColor,
     fontFamily: 'Noto Sans KR, sans-serif',
-    padding: '1rem 10rem',
+
   }
 
   // 로고 디자인
@@ -188,7 +189,7 @@ function AppHeader() {
     fontSize: '30px',
     fontWeight: 700,
     whiteSpace: 'nowrap',
-
+    paddingRight: '5vw',
   }
 
   // 네비게이션바 메뉴 디자인
@@ -198,7 +199,7 @@ function AppHeader() {
     fontSize: '14px',
     color: 'white',
     borderBottom: 'none',
-
+    paddingRight: '5vw',
   }
 
   // 네비게이션바 서브메뉴 디자인
@@ -211,7 +212,6 @@ function AppHeader() {
   const btnConStyle = {
     whiteSpace: 'nowrap',
     backgroundColor: primaryColor,
-    marginRight: '8vw',
     position: 'relative',
   }
 

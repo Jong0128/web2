@@ -1,0 +1,65 @@
+
+/* 폼 컨테이너 스타일 */
+.PostFormContainer {
+    width: 65rem; 
+    max-width: 1276px; /* 최대 폭을 1276px로 설정 */
+    margin: 0 auto; /* 화면 가운데 정렬을 위해 추가 */
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 20px; /* 내용 여백 설정 (원하는 여백으로 변경) */
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 입력 필드 스타일 */
+  .PostForm input[type="text"],
+  .PostForm textarea {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .PostForm .contentInput{
+    height: 500px;
+  }
+
+  .ButtonContainer {
+    text-align: center; /* 버튼을 오른쪽 정렬합니다 */
+    margin-top: 20px;
+  }
+
+  #category {
+    width: 20rem;
+  }
+
+  .space {
+    margin-top: 10px;
+  }
+
+  .uploadForm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #uploadCaution{
+    color: #A4AAB3;
+    font-size: 14px;
+  }
+  
+  .PostButton{
+    background-color: #5D59FF;
+    color: #fff;
+    border-color: #5D59FF;
+    border-radius: 10px;
+    padding: 0.7rem;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+  
+  /* 미디어 쿼리를 사용하여 화면 폭이 일정 값 이하일 때 폼 크기를 조절 */
+  @media (max-width: 768px) {
+    .PostFormContainer {
+      max-width: 100%; /* 폭을 100%로 설정하여 화면 가득 채우도록 변경 */
+    }
+  }
+  

@@ -113,16 +113,16 @@ function WritingList() {
         />
       </Card>
       <Button style={{ position: 'absolute', right: '450px', backgroundColor: primaryColor, color: 'white' }}>글 쓰기</Button>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '60px', marginBottom: '20px'}}>
-        <Button style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} onClick={() => setCurrentPage(1)}>처음으로</Button>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '60px', marginBottom: '20px' }}>
+        <Button style={{ backgroundColor: 'transparent', border: 'none', boxShadow: 'none' }} onClick={() => setCurrentPage(1)}>처음으로</Button>
         <Pagination
-          style={{textAlign: 'center' }}
+          style={{ textAlign: 'center' }}
           current={currentPage} // 현재 페이지 설정
           onChange={setCurrentPage} // 페이지 변경 핸들러 설정
           total={totalPage} // 총 페이지 수
           showSizeChanger={false} // 페이지 크기 변경 옵션 숨기기
         />
-        <Button style={{ backgroundColor: 'transparent', borderColor: 'transparent' }} onClick={() => setCurrentPage(totalPage)}>맨끝으로</Button>
+        <Button style={{ backgroundColor: 'transparent', border: 'none', boxShadow: 'none' }} onClick={() => setCurrentPage(totalPage)}>맨끝으로</Button>
       </div>
     </div>
   )

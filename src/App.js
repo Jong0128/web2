@@ -7,6 +7,7 @@ function App() {
     <>
       <Main />
       <WritingList />
+      <WritingPage />
     </>
   );
 }

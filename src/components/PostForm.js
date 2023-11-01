@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ImgCrop from 'antd-img-crop';
 import { Modal, Upload } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import './PostForm.css';

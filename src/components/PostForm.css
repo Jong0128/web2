@@ -15,12 +15,17 @@
   /* 입력 필드 스타일 */
   .PostForm input[type="text"],
   .PostForm textarea {
-    width: 95%;
     padding: 10px;
     font-size: 16px;
   }
   .PostForm .contentInput{
     height: 500px;
+  }
+
+  .TitleInput{
+    border-color: #E8EAEC;
+    border-radius: 4px;
+    width: 52%;
   }
 
   .ButtonContainer {
@@ -30,10 +35,20 @@
 
   #category {
     width: 20rem;
+    height: 2rem;
+    border-color: #E8EAEC;
+    border-radius: 4px;
+  }
+
+  .contentInput{
+    border-color: #E8EAEC;
+    border-radius: 4px;
+    width: 95%;
   }
 
   .space {
     margin-top: 10px;
+    
   }
 
   .uploadForm {
@@ -52,8 +67,21 @@
     border-color: #5D59FF;
     border-radius: 10px;
     padding: 0.7rem;
-    padding-left: 0.9rem;
-    padding-right: 0.9rem;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-right: 9px;
+  }
+
+  .SaveButton{
+    background-color: #D7D7FF;
+    color: #5D59FF;
+    border-color: #D7D7FF;
+    border-radius: 10px;
+    padding: 0.7rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 9px;
+    
   }
   
   /* 미디어 쿼리를 사용하여 화면 폭이 일정 값 이하일 때 폼 크기를 조절 */

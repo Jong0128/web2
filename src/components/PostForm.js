@@ -16,7 +16,6 @@ function PostForm() {
     const [category, setCategory] = useState('');
     const [content, setContent] = useState('');
 
-    {/* */ }
     const [previewOpen, setPreviewOpen] = useState(false);
     const [previewImage, setPreviewImage] = useState('');
     const [previewTitle, setPreviewTitle] = useState('');
@@ -44,7 +43,6 @@ function PostForm() {
         </div>
     );
 
-    {/* */ }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -119,6 +117,7 @@ function PostForm() {
                 </Modal>
                 <div className='ButtonContainer'>
                     <button type="submit" className='PostButton'>올리기</button>
+                    <button type="submit" className='SaveButton'>임시 저장</button>
                 </div>
             </div>
         </div>

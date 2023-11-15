@@ -15,10 +15,23 @@
   width: 800px; 
   margin-bottom: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  margin: 0;
 }
 
 .agreement-item {
   margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.agreeCheck{
+  margin-left: 70%;
+}
+
+.agreeAll{
+  margin-left: 63%;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 button {

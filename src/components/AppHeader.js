@@ -230,11 +230,11 @@ function AppHeader() {
     paddingLeft: '1rem',
     paddingRight: '1rem',
     left: '-4rem',
-    border: `5px solid ${primaryColor}`,
     borderRadius: '10px',
     display: isLoginFormVisible ? 'block' : 'none',
     backgroundColor: 'white',
     zIndex: 1,
+    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
   }
 
   // 알람 드롭다운 디자인
@@ -244,11 +244,12 @@ function AppHeader() {
     left: '-10rem',
     paddingLeft: '1rem',
     paddingRight: '1rem',
-    border: `5px solid ${primaryColor}`,
+
     borderRadius: '10px',
     display: isNotificationVisible ? 'block' : 'none',
     backgroundColor: 'white',
     zIndex: 1,
+    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
   }
 
   // 뱃지 스타일

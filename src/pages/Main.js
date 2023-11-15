@@ -1,5 +1,6 @@
 import { Card, Divider, Row, Col, Input, Carousel } from "antd";
 import { SearchOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import AppHeader from "../components/AppHeader";
 
 function Main() {
@@ -74,7 +75,7 @@ function Main() {
         <Col style={{ width: '500px' }}>
           <Card
             title={<span style={{ color: primaryColor }}>▮ 자유 게시판</span>}
-            extra={<a href="/">더보기</a>}
+            extra={<Link to="/WritingList"><li>더보기</li></Link>}
             bordered={true}
             style={cardStyle}
           >

@@ -4,6 +4,7 @@ import { Card, List, Typography, Input, Select, Button, Pagination } from 'antd'
 import { FaFileImage, FaThumbsUp, FaVideo, FaComment } from "react-icons/fa6";
 import AppHeader from "../components/AppHeader";
 import { SearchOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 function WritingList() {
   const data = [
@@ -112,7 +113,9 @@ function WritingList() {
           )}
         />
       </Card>
-      <Button style={{ position: 'absolute', right: '450px', backgroundColor: primaryColor, color: 'white' }}>글 쓰기</Button>
+      <Button style={{ position: 'absolute', right: '450px', backgroundColor: primaryColor, color: 'white' }}>
+        <Link to="/WritingPage">글 쓰기</Link>
+        </Button>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '60px', marginBottom: '20px' }}>
         <Button style={{ backgroundColor: 'transparent', border: 'none', boxShadow: 'none' }} onClick={() => setCurrentPage(1)}>처음으로</Button>
         <Pagination

@@ -52,7 +52,7 @@ const Agreement = ({ onNext }) => {
       </p>
 
       <div className="agreement-item">
-        <label htmlFor="agreement1">이용약관 </label>
+        <h4>이용약관</h4>
         <Card className="agreement-card">
           <p style={{ margin: 0 }}>
             제1조(목적) 이 약관은 SELECTORS(이하 "회사")가 제공하는
@@ -87,7 +87,7 @@ const Agreement = ({ onNext }) => {
 
       </div>
       <div className="agreement-item">
-        <label htmlFor="agreement2">개인정보 수집 및 이용 동의</label>
+      <h4>개인정보 수집 및 이용동의</h4>
         <Card className="agreement-card">
           <p style={{ margin: 0 }}>
             제1조(목적) 이 약관은 SELECTORS(이하 "회사")가 제공하는
@@ -121,7 +121,7 @@ const Agreement = ({ onNext }) => {
         </p>
       </div>
       <div className="agreement-item">
-        <label htmlFor="agreement3">기타</label>
+        <h4>기타</h4>
         <Card className="agreement-card">
           <p style={{ margin: 0 }}>
             제1조(목적) 이 약관은 SELECTORS(이하 "회사")가 제공하는
@@ -154,7 +154,7 @@ const Agreement = ({ onNext }) => {
           <label htmlFor="agreement3">&nbsp;동의함</label>
         </p>
       </div>
-      <button onClick={handleNextClick}>다음</button>
+      <button className="nextButton" onClick={handleNextClick}>다음</button>
     </div>
   );
 };

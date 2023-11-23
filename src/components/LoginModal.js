@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import './LoginModal.css';
+import { Checkbox, Form, Input } from 'antd';
 import { Link } from 'react-router-dom';
 
 const onFinish = (values) => {
@@ -9,7 +10,7 @@ const onFinishFailed = (errorInfo) => {
   console.log('Failed:', errorInfo);
 };
 
-function LoginForm() {
+function LoginModal() {
 
   // 로그인 폼 디자인
   const loginFormStyle = {
@@ -65,19 +66,17 @@ function LoginForm() {
       <Form.Item
         wrapperCol={{ offset: 4, span: 16 }}
       >
-        
-        <Button type="primary" htmlType="submit">
-          로그인
-        </Button>
 
-        <Button type="primary" htmlType="submit">
-        <Link to="/AgreementPage">회원가입</Link>
-        </Button>
-        
+        <div className='btnCon'>
+          <Link to="/AgreementPage"><button className='signUpBtn'>회원가입</button></Link>
+          <br/>
+          <button className='loginBtn'>로그인</button>
+        </div>
+
       </Form.Item>
-      
+
     </Form>
   )
 };
 
-export default LoginForm
+export default LoginModal

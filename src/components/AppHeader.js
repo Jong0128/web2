@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Badge, Button, Layout, Menu } from 'antd';
 import SubMenu from 'antd/es/menu/SubMenu';
-import LoginForm from './LoginForm';
+import LoginModal from './LoginModal';
 import Notification from './Notification'
 import { UserOutlined, BellOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
@@ -301,7 +301,7 @@ function AppHeader() {
             <UserOutlined />
           </Button>
           <div style={loginDropdownStyle}>
-            <LoginForm />
+            <LoginModal />
           </div>
         </div>
       </Header>

@@ -4,7 +4,7 @@ import './AgreementPage.css';
 import { Card } from "antd";
 import { useNavigate } from 'react-router-dom';
 
-const Agreement = ({ onNext }) => {
+const Agreement = () => {
   const [agreement1, setAgreement1] = useState(false);
   const [agreement2, setAgreement2] = useState(false);
   const [agreement3, setAgreement3] = useState(false);
@@ -32,7 +32,6 @@ const Agreement = ({ onNext }) => {
 
   const handleNextClick = () => {
     if (agreement1 && agreement2 && agreement3) {
-      onNext();
       navigate('/SignUp'); 
     } else {
       alert('약관에 동의해주세요.');
@@ -166,13 +165,10 @@ const Agreement = ({ onNext }) => {
 };
 
 function AgreementPage() {
-  const handleNext = () => {
-    alert('다음 페이지로 이동합니다.');
-  }
   return (
     <div>
       <AppHeader />
-      <Agreement onNext={handleNext} />
+      <Agreement />
     </div>
   )
 }

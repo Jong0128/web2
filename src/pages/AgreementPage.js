@@ -2,6 +2,7 @@ import AppHeader from "../components/AppHeader";
 import { useState } from "react";
 import './AgreementPage.css';
 import { Card } from "antd";
+import { useNavigate } from 'react-router-dom';
 
 const Agreement = ({ onNext }) => {
   const [agreement1, setAgreement1] = useState(false);
@@ -27,9 +28,12 @@ const Agreement = ({ onNext }) => {
     setAgreement3(!allChecked);
   };
 
+  const navigate = useNavigate();
+
   const handleNextClick = () => {
     if (agreement1 && agreement2 && agreement3) {
       onNext();
+      navigate('/SignUp'); 
     } else {
       alert('약관에 동의해주세요.');
     }
@@ -154,7 +158,9 @@ const Agreement = ({ onNext }) => {
           <label htmlFor="agreement3">&nbsp;동의함</label>
         </p>
       </div>
-      <button className="nextButton" onClick={handleNextClick}>다음</button>
+      <button className="nextButton" onClick={handleNextClick}>
+        다음
+        </button>
     </div>
   );
 };

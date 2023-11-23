@@ -10,16 +10,18 @@ import AppHeader from './components/AppHeader'
 function App() {
   return (
     <>
-    <SignUp />
-      {/*
+    {/* <SignUp /> */}
+      
           <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/WritingList" element={<WritingList />} />
           <Route path="/WritingPage" element={<WritingPage />} />
+          <Route path="/AgreementPage" element={<AgreementPage />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
-    */}
+   
     </>
   );
 }

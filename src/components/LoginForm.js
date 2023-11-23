@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
+import { Link } from 'react-router-dom';
 
 const onFinish = (values) => {
   console.log('Success:', values);
@@ -62,12 +63,19 @@ function LoginForm() {
       </Form.Item>
 
       <Form.Item
-        wrapperCol={{ offset: 8, span: 16 }}
+        wrapperCol={{ offset: 4, span: 16 }}
       >
+        
         <Button type="primary" htmlType="submit">
           로그인
         </Button>
+
+        <Button type="primary" htmlType="submit">
+        <Link to="/AgreementPage">회원가입</Link>
+        </Button>
+        
       </Form.Item>
+      
     </Form>
   )
 };

@@ -4,6 +4,7 @@ import SubMenu from 'antd/es/menu/SubMenu';
 import LoginForm from './LoginForm';
 import Notification from './Notification'
 import { UserOutlined, BellOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
 const { Header } = Layout;
 
@@ -265,7 +266,9 @@ function AppHeader() {
     <Layout>
       <Header style={headerStyle}>
         {/* 로고 */}
-        <div style={logoStyle}>LOGO SELECTORS</div>
+        <Link to = "/" >
+          <div style={logoStyle} >LOGO SELECTORS</div>
+        </Link>
 
         {/* 메인 메뉴*/}
         <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" style={menuStyle}>

@@ -4,7 +4,7 @@ import './SignUp.css';
 
 function SignUp() {
   const [selectedOption, setSelectedOption] = useState('');
-  const [timer, setTimer] = useState(3 * 60);
+  const [timer, setTimer] = useState(3);
   const [isActive, setIsActive] = useState(false);
   const [userId, setUserId] = useState("");
   const [userNickName, setUserNickName] = useState("");

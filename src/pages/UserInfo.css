@@ -1,4 +1,15 @@
-.SignInfo {
+.UserInfo {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.userProfile {
   max-width: 1000px;
   margin: auto;
   margin-top: 6rem;
@@ -9,9 +20,21 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.UserInfo label {
-  margin-top: 10px;
+.paymentInfo {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.UserInfo label,
+.userProfile label {
   margin-right: 10px;
+  font-weight: 700;
 }
 
 .validInput {
@@ -23,11 +46,17 @@
 }
 
 .UserInfo input[type='text'],
-.UserInfo input[type='password'] {
+.UserInfo input[type='password'],
+.userProfile input[type='text'] {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
   width: 300px;
+}
+
+.UserInfo input.userBirth {
+  width: 140px;
+  margin-right: 10px;
 }
 
 .UserInfo select {
@@ -35,15 +64,17 @@
   margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 147px;
+  width: 150px;
 }
+
+
 
 .UserInfo input.userEmail {
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 124px;
+  width: 300px;
 }
 
 .UserInfo select.userPhone {
@@ -77,8 +108,9 @@
   margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 322px;
+  width: 150px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .button {
@@ -104,39 +136,51 @@
   border: 2px solid #5d59ff;
 }
 
-.resend {
-  background-color: #a4aab3;
+.deleteAccount {
+  width: 90px;
+  padding: 3px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: grey;
+  position: absolute;
+  right: 22.5%;
 }
 
-.resend:hover {
-  border: 2px solid #a4aab3;
+.selectFile {
+  width: 90px;
+  padding: 3px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: grey;
 }
 
-.SignUpBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
-.SignUpBtn button {
-  padding: 10px 20px;
-  background-color: #5d59ff;
+.changeInfo {
+  width: 90px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 7px;
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 4px;
-}
-
-.SignUpBtn button:hover {
-  background-color: white;
-  color: black;
-  border: 2px solid #5d59ff;
+  background-color: #5d59ff;
+  position: absolute;
+  right: 50%;
 }

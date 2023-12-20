@@ -5,6 +5,7 @@ import AgreementPage from './pages/AgreementPage';
 import SignUp from './pages/SignUp';
 import WritingList from './pages/WritingList';
 import UserInfo from './pages/UserInfo';
+import ActivityLog from './pages/ActivityLog';
 
 function App() {
   return (

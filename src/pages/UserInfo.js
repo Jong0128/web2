@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './UserInfo.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import AppHeader from '../components/AppHeader';
 
 function UserInfo() {
@@ -46,7 +47,7 @@ function UserInfo() {
   };
 
   return (
-    <div>
+    <Router>
       <AppHeader />
       <div className="UserInfo">
         <span style={{ fontSize: '36px', fontWeight: '700' }}>개인정보</span>
@@ -177,7 +178,7 @@ function UserInfo() {
       </div>
 
       <button className='changeInfo'>정보 수정</button>
-    </div>
+    </Router>
   );
 };
 

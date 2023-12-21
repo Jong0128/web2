@@ -10,6 +10,7 @@ import ActivityLog from './pages/ActivityLog';
 function App() {
   return (
     <>
+      {/* <UserInfo /> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -17,7 +18,7 @@ function App() {
           <Route path="/WritingPage" element={<WritingPage />} />
           <Route path="/AgreementPage" element={<AgreementPage />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route pahte="/UserInfo" element={<UserInfo />} />
+          <Route path="/UserInfo" element={<UserInfo />} />
         </Routes>
       </BrowserRouter>
     </>

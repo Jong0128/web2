@@ -283,7 +283,7 @@ function Main() {
               </Col>
             </Row>
           </Card>
-          <Carousel autoplay style={{ marginLeft: "80px" }}>
+          {/* <Carousel autoplay style={{ marginLeft: "80px" }}>
             <div>
               <h3 style={contentStyle}>광고 1</h3>
             </div>
@@ -348,7 +348,7 @@ function Main() {
                 <span>1218명이 찜</span>
               </h3>
             </div>
-          </Carousel>
+          </Carousel> */}
         </Col>
       </Row>
     </div >

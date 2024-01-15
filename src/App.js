@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import WritingList from './pages/WritingList';
 import UserInfo from './pages/UserInfo';
 import ActivityLog from './pages/ActivityLog';
+import MainFix from './pages/MainFix';
 
 function App() {
   return (

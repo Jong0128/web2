@@ -1,0 +1,66 @@
+:root {
+  --primary-color: #5D59FF;
+}
+
+.first-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px 20px;
+  margin: 10px;
+  width: 25%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title {
+  margin: 10px 0 10px 0;
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.first-divider {
+  border-top: 1px solid lightgray;
+  margin: 5px -20px 20px -20px;
+}
+
+.divider {
+  border-top: 1px solid lightgray;
+}
+
+.card p {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.extra-card {
+  padding: 20px 20px;
+}
+
+.search-input {
+  height: 30px;
+  border: 1px solid var(--primary-color);
+  position: relative;
+  border-radius: 30px;
+  width: 400px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ranking {
+  margin-top: 30px;
+  margin-left: 80px;
+  width: 400px;
+}

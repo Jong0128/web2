@@ -1,19 +1,25 @@
-import { Card, Divider, Row, Col, Input } from "antd";
+import { Card, Row, Col, Input } from "antd";
 import { SearchOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import AppHeader from "../components/AppHeader";
 
-
-function MainFix() {
+function Main() {
 
   // 웹사이트 주요 컬러.
   const primaryColor = '#5D59FF'
+
+  // 전체 게시글 모음 스타일
+  const rowStyle = {
+    marginTop: '60px',
+    marginLeft: '180px',
+    marginRight: '180px',
+  }
 
   // 게시글 카드 스타일
   const cardStyle = {
     marginBottom: '10px',
     marginLeft: '10px',
     boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
-    width: '500px'
   }
 
   // 검색 창 스타일
@@ -29,7 +35,6 @@ function MainFix() {
     marginTop: '30px',
     marginLeft: '80px',
     width: '400px',
-    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
   }
 
   // 랭킹 내 폰트 스타일
@@ -39,34 +44,52 @@ function MainFix() {
     fontWeight: 500,
   }
 
+  // 광고 스타일
+  const contentStyle = {
+    height: '300px',
+    width: '300px',
+    color: '#fff',
+    lineHeight: '300px',
+    textAlign: 'center',
+    background: '#364d79',
+  };
+
+  // 판매 글 스타일
+  const contentStyle2 = {
+    height: '300px',
+    width: '300px',
+    lineHeight: '620px',
+    textAlign: 'center',
+    background: '#364d79',
+    color: 'black',
+    marginBottom: '40px',
+  };
+
 
   return (
     <div>
       <AppHeader />
-
-      <div style={{ display: 'flex', marginLeft: '3rem', marginTop: '2rem' }}>
-        {/* 첫번째 열 게시판 */}
-        <div>
+        <Col style={{ width: '500px' }}>
           <Card
             title={<span style={{ color: primaryColor }}>▮ 자유 게시판</span>}
-            extra={<a href="/">더보기</a>}
+            extra={<Link to="/WritingList"><li>더보기</li></Link>}
             bordered={true}
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/> 
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
           <Card
@@ -76,19 +99,19 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
           <Card
@@ -98,19 +121,19 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
           <Card
@@ -120,24 +143,24 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
-        </div>
+        </Col>
         {/* 두번째 열 게시판 */}
-        <div>
+        <Col style={{ width: '500px' }}>
           <Card
             title={<span style={{ color: primaryColor }}>▮ 핫 게시판</span>}
             extra={<a href="/">더보기</a>}
@@ -145,19 +168,19 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
           <Card
@@ -167,19 +190,19 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
           <Card
@@ -189,19 +212,19 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
           <Card
@@ -211,24 +234,23 @@ function MainFix() {
             style={cardStyle}
           >
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             오늘의 이야기
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             다들 출퇴근시간 얼마나돼?
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             스타벅스 5만원권
-            <Divider style={{ margin: "8px 0" }} />
+            <hr/>
             대학교
           </Card>
-        </div>
-        {/*검색바 랭킹 광고창 */}
-        <div>
+        </Col>
+        <Col style={{ width: '500px' }}>
           <Input
             style={searchStyle}
             placeholder="전체 게시판에서 검색하기!"
@@ -258,11 +280,9 @@ function MainFix() {
               </Col>
             </Row>
           </Card>
-          
-        </div>
-      </div>
+        </Col>
     </div >
   )
 }
 
-export default MainFix
+export default Main

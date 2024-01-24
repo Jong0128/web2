@@ -47,7 +47,7 @@ function UserInfo() {
   };
 
   return (
-    <Router>
+    <>
       <AppHeader />
       <div className="UserInfo">
         <span style={{ fontSize: '36px', fontWeight: '700' }}>개인정보</span>
@@ -178,7 +178,7 @@ function UserInfo() {
       </div>
 
       <button className='changeInfo'>정보 수정</button>
-    </Router>
+    </>
   );
 };
 

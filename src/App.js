@@ -6,7 +6,6 @@ import SignUp from './pages/SignUp';
 import WritingList from './pages/WritingList';
 import UserInfo from './pages/UserInfo';
 import ActivityLog from './pages/ActivityLog';
-import MainFix from './pages/MainFix';
 
 function App() {
   return (
@@ -20,6 +19,7 @@ function App() {
           <Route path="/AgreementPage" element={<AgreementPage />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/UserInfo" element={<UserInfo />} />
+          <Route path="/ActivityLog" element={<ActivityLog />} />
         </Routes>
       </BrowserRouter>
     </>

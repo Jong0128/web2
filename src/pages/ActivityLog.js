@@ -1,13 +1,22 @@
 import AppHeader from '../components/AppHeader';
-import { BrowserRouter as Router } from 'react-router-dom';
+import './ActivityLog.css';
+import { Card, List, Typography, Input, Select, Button, Pagination } from 'antd';
 
 function ActivityLog() {
   return (
-    <Router>
-      <div>
-        <AppHeader />
+    <div>
+      <AppHeader />
+      <div className='activity-log-header'>
+
       </div>
-    </Router>
+      <div className='activity-log-body'>
+
+      </div>
+      <div className='activity-log-footer'>
+
+      </div>
+    </div>
+
   );
 };
 

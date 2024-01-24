@@ -10,12 +10,28 @@
   margin-top: 50px;
 }
 
+.second-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
 .card {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 20px 20px;
   margin: 10px;
   width: 25%;
+}
+
+.advertisement {
+  border-radius: 10px;
+  border: rgba(0, 0, 0, 0.2) 1px solid;
+  padding: 20px 20px;
+  width: 370px;
+  height: 300px;
 }
 
 .card-header {
